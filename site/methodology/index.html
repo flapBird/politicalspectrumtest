@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Methodology — How the Political Spectrum Test Works</title>
+<meta name="description" content="How the Political Spectrum Test works: the four dimensions, the 24 questions, the exact scoring formula, the ideology-matching algorithm, and the test's limitations.">
+<link rel="canonical" href="https://politicalspectrumtest.online/methodology/">
+<link rel="alternate" hreflang="en" href="https://politicalspectrumtest.online/methodology/">
+<link rel="alternate" hreflang="x-default" href="https://politicalspectrumtest.online/methodology/">
+<meta name="theme-color" content="#F8F7F4">
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Political Spectrum Test">
+<meta property="og:title" content="Methodology — How the Political Spectrum Test Works">
+<meta property="og:description" content="The four dimensions, the 24 questions, the exact scoring formula, the ideology-matching algorithm, and the test's limitations.">
+<meta property="og:url" content="https://politicalspectrumtest.online/methodology/">
+<meta property="og:image" content="https://politicalspectrumtest.online/assets/img/og-cover.png">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Methodology — How the Political Spectrum Test Works",
+  "url": "https://politicalspectrumtest.online/methodology/",
+  "description": "The four dimensions, the 24 questions, the exact scoring formula, the ideology-matching algorithm, and the test's limitations.",
+  "isPartOf": { "@id": "https://politicalspectrumtest.online/#website" }
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="/">
+      <svg width="27" height="27" viewBox="0 0 28 28" aria-hidden="true">
+        <defs><linearGradient id="lg-meth" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#D64550"/><stop offset="0.36" stop-color="#E39B2D"/><stop offset="0.64" stop-color="#7C9C62"/><stop offset="1" stop-color="#3D6FA8"/>
+        </linearGradient></defs>
+        <circle cx="14" cy="14" r="9.5" fill="none" stroke="url(#lg-meth)" stroke-width="5"/>
+      </svg>
+      <span class="brand-name">Political Spectrum Test</span>
+    </a>
+    <nav class="header-nav" aria-label="Main">
+      <a class="nav-link" href="/#guides">Guides</a>
+      <a class="nav-link" href="/about/">About</a>
+      <a class="btn btn--sm" href="/test/">Take the Test</a>
+    </nav>
+    <a class="btn btn--sm header-cta-mobile" href="/test/">Take the Test</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="container" style="padding-top:72px">
+    <p class="eyebrow">Transparency first</p>
+    <h1 style="font-size:clamp(40px,5vw,58px); margin-top:16px">Methodology</h1>
+    <p class="guide-lede">Everything the test does, in plain language — and an honest account of what it can’t do. There is no hidden algorithm: the scoring below is exactly what runs in your browser.</p>
+  </section>
+
+  <section class="container section prose" style="padding-top:56px">
+    <h2>What the test measures</h2>
+    <p>Most “left versus right” quizzes compress politics into a single line. This test measures four dimensions instead, because positions on money, freedom, tradition, and the world vary independently. Six questions measure each dimension.</p>
+    <ul>
+      <li><strong>Economy</strong> — 0 is <em>economic left</em> (public ownership, redistribution, a large welfare state); 100 is <em>economic right</em> (private markets, lower taxes, a smaller state).</li>
+      <li><strong>Civil Liberties</strong> — 0 is <em>order first</em> (more state power for security and stability); 100 is <em>liberty first</em> (free expression, privacy, strict limits on the state).</li>
+      <li><strong>Society</strong> — 0 is <em>hold to tradition</em> (inherited customs and institutions as the backbone of society); 100 is <em>open to change</em> (active reform and adapting norms).</li>
+      <li><strong>Global Outlook</strong> — 0 is <em>nation first</em> (sovereignty, borders, national self-reliance); 100 is <em>one world</em> (international cooperation, open trade, pooled sovereignty).</li>
+    </ul>
+
+    <h2>The questions</h2>
+    <p>The test has 24 statements — six per dimension, presented in four groups. Each is a plain-language claim you rate on a five-point scale from <em>strongly disagree</em> to <em>strongly agree</em>. Every statement maps to exactly one dimension, and the direction it counts in is fixed in advance. Neutral answers are allowed and simply don’t move your score.</p>
+
+    <h2>How scoring works</h2>
+    <p>Each answer is converted to a value from −2 to +2 (strongly disagree = −2, disagree = −1, neutral = 0, agree = +1, strongly agree = +2). For each statement, that value is multiplied by the statement’s direction (whether agreeing pushes toward the 0 pole or the 100 pole), then the six values on a dimension are summed to a raw score between −6 and +6, and normalized to 0–100:</p>
+    <p class="formula">score(axis) = 100 × (raw + 6) / 12, where raw = Σ direction × answer-value</p>
+    <p>All neutral answers produce 50 on every axis. The scoring runs entirely in your browser; no answers are transmitted anywhere.</p>
+
+    <h2>The map</h2>
+    <p>The political map plots two of your four scores: the horizontal axis is <em>economic left versus right</em> and the vertical axis is <em>liberty versus authority</em> (liberty at the top). Your Society and Global Outlook scores are shown as separate bars, since four dimensions don’t fit on one flat map without losing information. The quadrant colors are a visual aid, not categories.</p>
+
+    <h2>Ideology matching</h2>
+    <p>Your four scores are compared against 14 reference ideologies, each placed on the same four dimensions. The match is a simple distance calculation:</p>
+    <p class="formula">distance = √( (Δeconomy)² + (Δliberties)² + (Δsociety)² + (Δglobal)² )<br>proximity = max(30, 100 − distance × 1.25)</p>
+    <p>Your closest match is the smallest distance; “also close to” lists the runners-up. Two honest caveats: the reference positions are approximations, and real ideologies are contested, internally diverse, and change over time. A high proximity means your answers resemble our rough sketch of that tradition — not that any scholar would agree, and never that we endorse it. Every position exists on a spectrum; the labels are for orientation.</p>
+
+    <h2>Known limitations</h2>
+    <ul>
+      <li><strong>Self-report.</strong> Results reflect how you answer on one day, not a stable measure of your personality. Moods, wording, and current events all shift answers.</li>
+      <li><strong>No validation study.</strong> The test is an educational self-reflection tool, not a validated psychometric instrument. We publish the scoring precisely so you can judge it yourself.</li>
+      <li><strong>Five-point scales are crude.</strong> They can’t capture “it depends”, intensity, or contradictions — most people hold some internally mixed positions.</li>
+      <li><strong>English phrasing carries assumptions.</strong> Words like “regulation” or “tradition” mean different things in different countries. A multilingual version is planned.</li>
+      <li><strong>Four dimensions are still a simplification.</strong> Real politics also spans issues like climate, migration detail, and constitutional questions that don’t reduce cleanly to four axes.</li>
+    </ul>
+
+    <h2>Privacy</h2>
+    <p>There are no accounts, no cookies, no analytics, and no server-side storage of answers. Progress and results live in your browser’s local storage and can be erased with one click (see the <a href="/privacy/">privacy page</a>). Share links carry only the four dimension scores.</p>
+
+    <h2>Change log</h2>
+    <ul>
+      <li><strong>v1.0 — November 2026.</strong> Initial release: 24 questions, 4 dimensions, 14 reference ideologies, 10 ideology guides.</li>
+    </ul>
+
+    <div class="notice" style="margin-top:48px">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16151A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.6-3 7.6-7 9.5-4-1.9-7-4.9-7-9.5V6z"/><path d="M9 12l2 2 4-4.5"/></svg>
+      <div><strong>Try it yourself.</strong> The test takes about five minutes and shows you exactly what this page describes. <a href="/test/">Start the test →</a></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer footer-slim">
+  <div class="container footer-grid">
+    <a class="brand" href="/" style="color:#FFFFFF">
+      <svg width="24" height="24" viewBox="0 0 28 28" aria-hidden="true">
+        <defs><linearGradient id="lg-mfoot" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#D64550"/><stop offset="0.36" stop-color="#E39B2D"/><stop offset="0.64" stop-color="#7C9C62"/><stop offset="1" stop-color="#3D6FA8"/>
+        </linearGradient></defs>
+        <circle cx="14" cy="14" r="9.5" fill="none" stroke="url(#lg-mfoot)" stroke-width="5"/>
+      </svg>
+      <span class="brand-name" style="font-size:16px">Political Spectrum Test</span>
+    </a>
+    <div style="font-size:13px">Educational tool — results are for reflection, not science.</div>
+    <div style="font-size:13px; color:var(--ghost)">© 2026 politicalspectrumtest.online</div>
+  </div>
+</footer>
+
+</body>
+</html>

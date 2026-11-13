@@ -1,0 +1,23 @@
+{
+  "v": 3,
+  "createdOnFiles": { "v": 1, "at": "2026-11-14T01:40:00Z" },
+  "title": "Political Spectrum Test",
+  "launch": { "view": "canvas" },
+  "pages": [],
+  "boards": {
+    "Main.dc.html": { "x": 0, "y": 0, "w": 1440, "h": 5200, "expand": "fill", "title": "Homepage — Desktop" },
+    "Test.dc.html": { "x": 0, "y": 5320, "w": 1440, "h": 980, "expand": "fill", "title": "Test — Desktop", "is_interactive": true },
+    "Results.dc.html": { "x": 0, "y": 6420, "w": 1440, "h": 3050, "expand": "fill", "title": "Results — Desktop" },
+    "Ideology.dc.html": { "x": 0, "y": 9590, "w": 1440, "h": 2900, "expand": "fill", "title": "Ideology Guide — Desktop" },
+    "HomeMobile.dc.html": { "x": 1560, "y": 0, "w": 390, "h": 844, "title": "Homepage — Mobile" },
+    "TestMobile.dc.html": { "x": 1560, "y": 964, "w": 390, "h": 844, "title": "Test — Mobile" },
+    "ResultsMobile.dc.html": { "x": 1560, "y": 1928, "w": 390, "h": 844, "title": "Results — Mobile" }
+  },
+  "order": ["Main.dc.html", "Test.dc.html", "Results.dc.html", "Ideology.dc.html", "HomeMobile.dc.html", "TestMobile.dc.html", "ResultsMobile.dc.html"],
+  "notes": {
+    "t-desktop": { "x": 0, "y": -340, "text": "Political Spectrum Test — desktop pages", "kind": "title1", "maxW": 1440 },
+    "t-mobile": { "x": 1560, "y": -340, "text": "Mobile previews", "kind": "title1", "maxW": 390 },
+    "n-brand": { "x": 2050, "y": 0, "w": 330, "text": "Brand tokens — paper #F8F7F4 · ink #16151A · line #E5E3DC · muted #5F5D66. Spectrum gradient #D64550 → #E39B2D → #7C9C62 → #3D6FA8. Fraunces display serif + Inter body." }
+  },
+  "designSystems": []
+}

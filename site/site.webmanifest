@@ -1,0 +1,13 @@
+{
+  "name": "Political Spectrum Test",
+  "short_name": "Spectrum Test",
+  "description": "A free political ideology quiz that maps your beliefs across four dimensions.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#F8F7F4",
+  "theme_color": "#F8F7F4",
+  "icons": [
+    { "src": "/assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "/assets/img/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}

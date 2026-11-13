@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Political Spectrum Result — Political Spectrum Test</title>
+<meta name="description" content="See your political map: where your answers place you on economics, civil liberties, society, and global outlook, plus your closest ideology matches.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://politicalspectrumtest.online/results/">
+<meta name="theme-color" content="#F8F7F4">
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Political Spectrum Test">
+<meta property="og:title" content="My Political Spectrum Result">
+<meta property="og:description" content="See where your answers place you across four political dimensions.">
+<meta property="og:url" content="https://politicalspectrumtest.online/results/">
+<meta property="og:image" content="https://politicalspectrumtest.online/assets/img/og-cover.png">
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="/">
+      <svg width="25" height="25" viewBox="0 0 28 28" aria-hidden="true">
+        <defs><linearGradient id="lg-res" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#D64550"/><stop offset="0.36" stop-color="#E39B2D"/><stop offset="0.64" stop-color="#7C9C62"/><stop offset="1" stop-color="#3D6FA8"/>
+        </linearGradient></defs>
+        <circle cx="14" cy="14" r="9.5" fill="none" stroke="url(#lg-res)" stroke-width="5"/>
+      </svg>
+      <span class="brand-name">Political Spectrum Test</span>
+    </a>
+    <nav class="header-nav" aria-label="Main">
+      <a class="nav-link" href="/methodology/">Methodology</a>
+      <a class="btn btn--sm" href="/test/">Retake the Test</a>
+    </nav>
+    <a class="btn btn--sm header-cta-mobile" href="/test/">Retake</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <div class="result-empty" id="resultEmpty" hidden>
+    <p class="eyebrow">Your result</p>
+    <h1>No result on this device yet</h1>
+    <p>Take the free 24-question test to see your political map, your axis scores, and your closest ideology matches. It takes about five minutes and runs entirely in your browser.</p>
+    <div style="margin-top:28px"><a class="btn btn--lg" href="/test/">Take the Test
+      <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+    </a></div>
+  </div>
+
+  <div id="resultFull" hidden>
+
+    <!-- Result hero -->
+    <section class="result-hero container">
+      <p class="eyebrow">Your result · computed in your browser</p>
+      <h1>You lean <span class="match-color" id="matchNameHero">…</span></h1>
+      <p class="result-sub" id="resultSummary"></p>
+    </section>
+
+    <!-- Map + matches -->
+    <section class="container" style="padding-top:44px">
+      <div class="result-grid">
+        <div class="card map-card">
+          <div class="map-card-head">
+            <h2 style="font-family:var(--font-body); font-size:18px; font-weight:600; margin:0">Political Map</h2>
+            <div class="map-legend">
+              <span><span class="legend-dot"></span> You</span>
+              <span><span class="legend-ring"></span> Closest ideology</span>
+            </div>
+          </div>
+          <div class="map-holder">
+            <svg id="resultMap" viewBox="0 0 460 460" role="img" aria-label="Your political map"></svg>
+          </div>
+        </div>
+        <div class="match-stack">
+          <div class="card card-dark match-card">
+            <p class="eyebrow" style="margin:0">Closest match</p>
+            <div class="match-name" id="matchName">…</div>
+            <div class="match-meter">
+              <div class="meter-track"><div class="meter-fill" id="matchFill"></div></div>
+              <span class="meter-num" id="matchPct">0%</span>
+            </div>
+            <p class="match-desc" id="matchDesc"></p>
+            <a class="match-link" id="matchLink" href="#">
+              <span id="matchLinkText">Read the guide</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+          <div class="card alt-card">
+            <p class="alt-label" style="margin:0">Also close to</p>
+            <div id="altRows"></div>
+            <p class="alt-note">Compared against 14 ideologies · scores are proximity, not percentiles</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Four axes -->
+    <section class="section container" style="padding-top:56px">
+      <h2 class="section-title" style="font-size:32px">Your Axes</h2>
+      <div class="axes-grid">
+        <div class="axis-card">
+          <div class="axis-head"><span>Economy</span><span class="axis-pct" id="econPct"></span></div>
+          <div class="axis-track"><div class="axis-marker" id="econMarker"></div></div>
+          <div class="axis-poles"><span>Economic left</span><span>Economic right</span></div>
+          <p id="econDesc"></p>
+        </div>
+        <div class="axis-card">
+          <div class="axis-head"><span>Civil Liberties</span><span class="axis-pct" id="civPct"></span></div>
+          <div class="axis-track"><div class="axis-marker" id="civMarker"></div></div>
+          <div class="axis-poles"><span>Order first</span><span>Liberty first</span></div>
+          <p id="civDesc"></p>
+        </div>
+        <div class="axis-card">
+          <div class="axis-head"><span>Society</span><span class="axis-pct" id="socPct"></span></div>
+          <div class="axis-track axis-track--society"><div class="axis-marker" id="socMarker"></div></div>
+          <div class="axis-poles"><span>Hold to tradition</span><span>Open to change</span></div>
+          <p id="socDesc"></p>
+        </div>
+        <div class="axis-card">
+          <div class="axis-head"><span>Global Outlook</span><span class="axis-pct" id="geoPct"></span></div>
+          <div class="axis-track axis-track--global"><div class="axis-marker" id="geoMarker"></div></div>
+          <div class="axis-poles"><span>Nation first</span><span>One world</span></div>
+          <p id="geoDesc"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Meaning + share -->
+    <section class="container" style="padding-top:0">
+      <div class="result-lower">
+        <div class="card">
+          <h2 style="font-size:24px; margin:0">What this means</h2>
+          <p style="margin:16px 0 0; font-size:15.5px; line-height:1.7; color:var(--ink-soft)" id="meaningText"></p>
+          <p style="margin:14px 0 0; font-size:14px; line-height:1.65; color:var(--ghost)">No single label can capture a whole worldview — think of this as a map, not a verdict. Read the <a href="/methodology/" style="color:inherit">methodology</a> to see exactly how scores are computed.</p>
+        </div>
+        <div class="card">
+          <h2 style="font-size:24px; margin:0">Share your result</h2>
+          <div class="share-stack">
+            <button class="btn" id="shareCopy" type="button">Copy result link</button>
+            <button class="btn btn--outline" id="shareBtn" type="button" hidden>Share…</button>
+            <button class="btn btn--outline" id="sharePng" type="button">Download map as image</button>
+          </div>
+          <p class="share-note">The link carries only your four scores — never your individual answers.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next steps -->
+    <section class="container" style="padding-top:0">
+      <div class="next-band">
+        <div>
+          <div class="next-title">Keep exploring</div>
+          <p>Read where your closest ideology sits on the spectrum, compare it with its neighbors, or retake the test to see how your answers shift over time.</p>
+        </div>
+        <div class="next-actions">
+          <a class="btn btn--sm" id="guideLink" href="#">Guide</a>
+          <a class="btn btn--outline btn--sm" href="/test/">Retake test</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer footer-slim">
+      <div class="container footer-grid">
+        <a class="brand" href="/" style="color:#FFFFFF">
+          <svg width="24" height="24" viewBox="0 0 28 28" aria-hidden="true">
+            <defs><linearGradient id="lg-rfoot" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#D64550"/><stop offset="0.36" stop-color="#E39B2D"/><stop offset="0.64" stop-color="#7C9C62"/><stop offset="1" stop-color="#3D6FA8"/>
+            </linearGradient></defs>
+            <circle cx="14" cy="14" r="9.5" fill="none" stroke="url(#lg-rfoot)" stroke-width="5"/>
+          </svg>
+          <span class="brand-name" style="font-size:16px">Political Spectrum Test</span>
+        </a>
+        <div style="font-size:13px">Educational tool — results are for reflection, not science.</div>
+        <div style="font-size:13px; color:var(--ghost)">© 2026 politicalspectrumtest.online</div>
+      </div>
+    </footer>
+  </div>
+</main>
+
+<script src="/assets/js/results.js" defer></script>
+</body>
+</html>

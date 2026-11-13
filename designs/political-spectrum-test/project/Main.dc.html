@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Homepage — Political Spectrum Test</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body { margin: 0; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #F8F7F4; }
+a { color: #5F5D66; } a:hover { color: #16151A; }
+</style>
+</helmet>
+
+<div style="background:#F8F7F4; color:#16151A; -webkit-font-smoothing:antialiased">
+
+<!-- ============ HEADER ============ -->
+<header style="border-bottom:1px solid #E5E3DC">
+  <div style="max-width:1160px; margin:0 auto; padding:0 48px; height:78px; display:flex; align-items:center; justify-content:space-between">
+    <a href="#" style="display:flex; align-items:center; gap:11px; text-decoration:none; color:#16151A">
+      <svg width="27" height="27" viewBox="0 0 28 28" aria-hidden="true">
+        <defs><linearGradient id="lg-h" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#D64550"/><stop offset="0.36" stop-color="#E39B2D"/><stop offset="0.64" stop-color="#7C9C62"/><stop offset="1" stop-color="#3D6FA8"/>
+        </linearGradient></defs>
+        <circle cx="14" cy="14" r="9.5" fill="none" stroke="url(#lg-h)" stroke-width="5"/>
+      </svg>
+      <span style="font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:19px; letter-spacing:-0.01em">Political Spectrum Test</span>
+    </a>
+    <nav style="display:flex; align-items:center; gap:30px; font-size:15px">
+      <a href="#" style="color:#5F5D66; text-decoration:none; font-weight:500">Methodology</a>
+      <a href="#" style="color:#5F5D66; text-decoration:none; font-weight:500">About</a>
+      <a href="./Test.dc.html" style="background:#16151A; color:#FFFFFF; padding:11px 22px; border-radius:999px; font-weight:600; font-size:14.5px; text-decoration:none">Take the Test</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section style="max-width:1160px; margin:0 auto; padding:104px 48px 0; text-align:center">
+  <div style="font-size:12px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:#6E6C76">Free political ideology quiz</div>
+  <h1 style="margin:22px auto 0; max-width:840px; font-family:'Fraunces',Georgia,serif; font-size:66px; line-height:1.06; font-weight:600; letter-spacing:-0.015em">Discover Where You Stand Politically</h1>
+  <p style="margin:26px auto 0; max-width:660px; font-size:18px; line-height:1.6; color:#5F5D66">Answer 24 plain-language statements and map your beliefs across four dimensions — economy, civil liberties, society, and how you see the world.</p>
+  <div style="margin-top:38px">
+    <a href="./Test.dc.html" style="display:inline-flex; align-items:center; gap:11px; background:#16151A; color:#FFFFFF; border-radius:999px; padding:19px 36px; font-size:17px; font-weight:600; text-decoration:none">
+      Start Free Test
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+  <div style="margin-top:20px; font-size:14px; color:#6E6C76">24 questions &nbsp;·&nbsp; About 5 minutes &nbsp;·&nbsp; No sign-up &nbsp;·&nbsp; Answers never leave your device</div>
+  <div style="margin:52px auto 0; width:280px; height:6px; border-radius:999px; background:linear-gradient(90deg, #D64550 0%, #E39B2D 34%, #7C9C62 63%, #3D6FA8 100%)"></div>
+</section>
+
+<!-- ============ SAMPLE RESULT PREVIEW ============ -->
+<section style="max-width:1160px; margin:0 auto; padding:104px 48px 0">
+  <div style="font-size:12px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:#6E6C76">Sample result</div>
+  <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:24px">
+    <h2 style="margin:14px 0 0; font-family:'Fraunces',Georgia,serif; font-size:40px; font-weight:600; line-height:1.12; letter-spacing:-0.01em">Your Political Profile — Preview</h2>
+    <a href="./Test.dc.html" style="display:inline-flex; align-items:center; gap:8px; font-size:15px; font-weight:600; color:#16151A; text-decoration:none; white-space:nowrap; padding-bottom:6px">Start the test <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+  </div>
+
+  <div style="display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:24px; margin-top:40px">
+    <!-- Card: Political Map -->
+    <div style="background:#FFFFFF; border:1px solid #E5E3DC; border-radius:22px; padding:30px; display:flex; gap:30px; align-items:center">
+      <svg width="176" height="176" viewBox="0 0 176 176" role="img" aria-label="Example political map with one result plotted">
+        <rect x="1" y="1" width="87" height="87" fill="#F6E3E0"/>
+        <rect x="88" y="1" width="87" height="87" fill="#E2E7F0"/>
+        <rect x="1" y="88" width="87" height="87" fill="#E4EAD9"/>
+        <rect x="88" y="88" width="87" height="87" fill="#F2E9D4"/>
+        <line x1="88" y1="0" x2="88" y2="176" stroke="#B9B6AC" stroke-width="1.2"/>
+        <line x1="0" y1="88" x2="176" y2="88" stroke="#B9B6AC" stroke-width="1.2"/>
+        <text x="10" y="166" font-family="Inter, sans-serif" font-size="9.5" fill="#6E6C76">Economic left</text>
+        <text x="166" y="166" text-anchor="end" font-family="Inter, sans-serif" font-size="9.5" fill="#6E6C76">Right</text>
+        <text x="10" y="14" font-family="Inter, sans-serif" font-size="9.5" fill="#6E6C76">Liberty</text>
+        <text x="166" y="14" text-anchor="end" font-family="Inter, sans-serif" font-size="9.5" fill="#6E6C76">Authority</text>
+        <circle cx="104" cy="54" r="8" fill="#16151A" stroke="#FFFFFF" stroke-width="3"/>
+      </svg>
+      <div>
+        <div style="font-size:20px; font-weight:600">Political Map</div>
+        <p style="margin:10px 0 0; font-size:15px; line-height:1.6; color:#5F5D66">A visual map of your values — where economic and civic beliefs place you at a glance.</p>
+      </div>
+    </div>
+    <!-- Card: Your Axes -->
+    <div style="background:#FFFFFF; border:1px solid #E5E3DC; border-radius:22px; padding:30px 34px">
+      <div style="font-size:20px; font-weight:600">Your Axes</div>
+      <p style="margin:10px 0 18px; font-size:15px; line-height:1.6; color:#5F5D66">Scores across four dimensions, with both poles spelled out.</p>
+      <div style="display:flex; flex-direction:column; gap:15px">
+        <div>
+          <div style="display:flex; justify-content:space-between; font-size:12.5px; font-weight:600"><span>Economy</span><span style="color:#6E6C76; font-weight:500">62% right</span></div>
+          <div style="position:relative; height:8px; border-radius:999px; background:linear-gradient(90deg, #D64550, #7C9C62, #3D6FA8); margin-top:6px"><div style="position:absolute; left:62%; top:50%; transform:translate(-50%, -50%); width:16px; height:16px; border-radius:50%; background:#16151A; border:3px solid #FFFFFF"></div></div>
+        </div>
+        <div>
+          <div style="display:flex; justify-content:space-between; font-size:12.5px; font-weight:600"><span>Civil Liberties</span><span style="color:#6E6C76; font-weight:500">74% liberty</span></div>
+          <div style="position:relative; height:8px; border-radius:999px; background:linear-gradient(90deg, #3D6FA8, #7C9C62, #D64550); margin-top:6px"><div style="position:absolute; left:74%; top:50%; transform:translate(-50%, -50%); width:16px; height:16px; border-radius:50%; background:#16151A; border:3px solid #FFFFFF"></div></div>
+        </div>
+        <div>
+          <div style="display:flex; justify-content:space-between; font-size:12.5px; font-weight:600"><span>Society</span><span style="color:#6E6C76; font-weight:500">58% progressive</span></div>
+          <div style="position:relative; height:8px; border-radius:999px; background:linear-gradient(90deg, #7C9C62, #E39B2D); margin-top:6px"><div style="position:absolute; left:58%; top:50%; transform:translate(-50%, -50%); width:16px; height:16px; border-radius:50%; background:#16151A; border:3px solid #FFFFFF"></div></div>
+        </div>
+        <div>
+          <div style="display:flex; justify-content:space-between; font-size:12.5px; font-weight:600"><span>Global Outlook</span><span style="color:#6E6C76; font-weight:500">55% globalist</span></div>
+          <div style="position:relative; height:8px; border-radius:999px; background:linear-gradient(90deg, #3D6FA8, #E39B2D); margin-top:6px"><div style="position:absolute; left:55%; top:50%; transform:translate(-50%, -50%); width:16px; height:16px; border-radius:50%; background:#16151A; border:3px solid #FFFFFF"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Match card -->
+  <div style="margin-top:24px; background:#16151A; border-radius:22px; padding:34px 38px; display:flex; align-items:center; justify-content:space-between; gap:32px">
+    <div style="display:flex; align-items:center; gap:26px">
+      <div style="width:64px; height:64px; border-radius:50%; background:rgba(255,255,255,0.08); border:2px solid rgba(255,255,255,0.25); display:flex; align-items:center; justify-content:center; font-family:'Fraunces',Georgia,serif; font-size:22px; font-weight:600; color:#FFFFFF">87</div>
+      <div>
+        <div style="font-size:12px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:#B9B7BF">Your closest match</div>
+        <div style="margin-top:7px; font-family:'Fraunces',Georgia,serif; font-size:27px; font-weight:600; color:#FFFFFF">Social Democrat</div>
+        <div style="margin-top:6px; font-size:14px; color:#B9B7BF">87% proximity — compared against 14 ideologies, right on your device.</div>
+      </div>
+    </div>
+    <a href="./Test.dc.html" style="display:inline-flex; align-items:center; gap:9px; background:#FFFFFF; color:#16151A; border-radius:999px; padding:14px 26px; font-size:15px; font-weight:600; text-decoration:none; white-space:nowrap">Get yours <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+  </div>
+  <div style="margin-top:14px; font-size:13px; color:#6E6C76">Example result shown above — yours is computed locally the moment you finish.</div>
+</section>
+
+<!-- ============ FOUR DIMENSIONS ============ -->
+<section style="max-width:1160px; margin:0 auto; padding:104px 48px 0">
+  <div style="font-size:12px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:#6E6C76">What we measure</div>
+  <h2 style="margin:14px 0 0; font-family:'Fraunces',Georgia,serif; font-size:40px; font-weight:600; line-height:1.12; letter-spacing:-0.01em">Explore Your Political Values</h2>
+  <p style="margin:16px 0 0; max-width:640px; font-size:16.5px; line-height:1.6; color:#5F5D66">Four dimensions instead of one line — because "left" and "right" alone can't describe how you think about money, freedom, tradition, or the world.</p>
+
+  <div style="display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:24px; margin-top:40px">
+    <!-- Economy -->
+    <div style="background:#FFFFFF; border:1px solid #E5E3DC; border-radius:22px; padding:30px">
+      <div style="display:flex; align-items:center; gap:13px">
+        <div style="width:42px; height:42px; border-radius:13px; background:#F1EFE9; display:flex; align-items:center; justify-content:center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16151A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5H3z"/><path d="M5 8v9M9.5 8v9M14.5 8v9M19 8v9"/><path d="M3 20h18"/></svg>
+        </div>
+        <div style="font-size:19px; font-weight:600">Economy</div>
+      </div>
+      <p style="margin:15px 0 0; font-size:15px; line-height:1.6; color:#5F5D66">How wealth should be created and shared — the role of markets, taxes, and the welfare state.</p>
+      <div style="margin-top:20px">
+        <div style="position:relative; height:8px; border-radius:999px; background:linear-gradient(90deg, #D64550, #7C9C62, #3D6FA8)"><div style="position:absolute; left:38%; top:50%; transform:translate(-50%, -50%); width:16px; height:16px; border-radius:50%; background:#16151A; border:3px solid #FFFFFF"></div></div>
+        <div style="display:flex; justify-content:space-between; font-size:12px; font-weight:600; margin-top:7px; color:#4A4850"><span>Economic left</span><span>Economic right</span></div>
+      </div>
+      <div style="margin-top:18px; padding-top:16px; border-top:1px dashed #E5E3DC; font-size:13.5px; color:#6E6C76; line-height:1.55">Keynes believed markets need steering <span style="color:#B0AEA6; padding:0 5px">↔</span> Friedman believed markets work best free.</div>
+    </div>
+    <!-- Civil Liberties -->
+    <div style="background:#FFFFFF; border:1px solid #E5E3DC; border-radius:22px; padding:30px">
+      <div style="display:flex; align-items:center; gap:13px">
+        <div style="width:42px; height:42px; border-radius:13px; background:#F1EFE9; display:flex; align-items:center; justify-content:center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16151A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.6-3 7.6-7 9.5-4-1.9-7-4.9-7-9.5V6z"/><path d="M9 12l2 2 4-4.5"/></svg>
+        </div>
+        <div style="font-size:19px; font-weight:600">Civil Liberties</div>
+      </div>
+      <p style="margin:15px 0 0; font-size:15px; line-height:1.6; color:#5F5D66">Freedom versus order — privacy, speech, policing, and how much power the state should have.</p>
+      <div style="margin-top:20px">
+        <div style="position:relative; height:8px; border-radius:999px; background:linear-gradient(90deg, #3D6FA8, #7C9C62, #D64550)"><div style="position:absolute; left:72%; top:50%; transform:translate(-50%, -50%); width:16px; height:16px; border-radius:50%; background:#16151A; border:3px solid #FFFFFF"></div></div>
+        <div style="display:flex; justify-content:space-between; font-size:12px; font-weight:600; margin-top:7px; color:#4A4850"><span>Liberty first</span><span>Order first</span></div>
+      </div>
+      <div style="margin-top:18px; padding-top:16px; border-top:1px dashed #E5E3DC; font-size:13.5px; color:#6E6C76; line-height:1.55">Jefferson put liberty first <span style="color:#B0AEA6; padding:0 5px">↔</span> Hamilton put a strong union first.</div>
+    </div>
+    <!-- Society -->
+    <div style="background:#FFFFFF; border:1px solid #E5E3DC; border-radius:22px; padding:30px">
+      <div style="display:flex; align-items:center; gap:13px">
+        <div style="width:42px; height:42px; border-radius:13px; background:#F1EFE9; display:flex; align-items:center; justify-content:center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16151A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8.5" cy="8.5" r="3"/><path d="M3.5 18.5c0-2.8 2.2-4.5 5-4.5s5 1.7 5 4.5"/><circle cx="16.5" cy="9.5" r="2.4"/><path d="M16 13.9c2.8.3 4.8 2 4.8 4.6"/></svg>
+        </div>
+        <div style="font-size:19px; font-weight:600">Society</div>
+      </div>
+      <p style="margin:15px 0 0; font-size:15px; line-height:1.6; color:#5F5D66">How fast society should change — family, faith, identity, and whose traditions set the rules.</p>
+      <div style="margin-top:20px">
+        <div style="position:relative; height:8px; border-radius:999px; background:linear-gradient(90deg, #7C9C62, #E39B2D)"><div style="position:absolute; left:60%; top:50%; transform:translate(-50%, -50%); width:16px; height:16px; border-radius:50%; background:#16151A; border:3px solid #FFFFFF"></div></div>
+        <div style="display:flex; justify-content:space-between; font-size:12px; font-weight:600; margin-top:7px; color:#4A4850"><span>Open to change</span><span>Hold to tradition</span></div>
+      </div>
+      <div style="margin-top:18px; padding-top:16px; border-top:1px dashed #E5E3DC; font-size:13.5px; color:#6E6C76; line-height:1.55">Beauvoir believed society can be remade <span style="color:#B0AEA6; padding:0 5px">↔</span> Burke believed institutions carry wisdom.</div>
+    </div>
+    <!-- Global Outlook -->
+    <div style="background:#FFFFFF; border:1px solid #E5E3DC; border-radius:22px; padding:30px">
+      <div style="display:flex; align-items:center; gap:13px">
+        <div style="width:42px; height:42px; border-radius:13px; background:#F1EFE9; display:flex; align-items:center; justify-content:center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16151A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17"/><path d="M12 3.5c2.6 2.4 3.9 5.2 3.9 8.5s-1.3 6.1-3.9 8.5c-2.6-2.4-3.9-5.2-3.9-8.5s1.3-6.1 3.9-8.5z"/></svg>
+        </div>
+        <div style="font-size:19px; font-weight:600">Global Outlook</div>
+      </div>
+      <p style="margin:15px 0 0; font-size:15px; line-height:1.6; color:#5F5D66">Nation or world first — trade, borders, treaties, and how much sovereignty to pool.</p>
+      <div style="margin-top:20px">
+        <div style="position:relative; height:8px; border-radius:999px; background:linear-gradient(90deg, #3D6FA8, #E39B2D)"><div style="position:absolute; left:54%; top:50%; transform:translate(-50%, -50%); width:16px; height:16px; border-radius:50%; background:#16151A; border:3px solid #FFFFFF"></div></div>
+        <div style="display:flex; justify-content:space-between; font-size:12px; font-weight:600; margin-top:7px; color:#4A4850"><span>One world</span><span>Nation first</span></div>
+      </div>
+      <div style="margin-top:18px; padding-top:16px; border-top:1px dashed #E5E3DC; font-size:13.5px; color:#6E6C76; line-height:1.55">Kant imagined cooperation across borders <span style="color:#B0AEA6; padding:0 5px">↔</span> de Gaulle put the nation first.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW THE TEST WORKS ============ -->
+<section style="max-width:1160px; margin:0 auto; padding:104px 48px 0">
+  <div style="font-size:12px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:#6E6C76">Before you start</div>
+  <h2 style="margin:14px 0 0; font-family:'Fraunces',Georgia,serif; font-size:40px; font-weight:600; line-height:1.12; letter-spacing:-0.01em">How the Test Works</h2>
+
+  <div style="display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:24px; margin-top:40px">
+    <div style="background:#FFFFFF; border:1px solid #E5E3DC; border-radius:22px; padding:30px">
+      <div style="font-family:'Fraunces',Georgia,serif; font-size:34px; font-weight:600; color:#D64550">01</div>
+      <div style="margin-top:12px; font-size:18px; font-weight:600">Answer 24 statements</div>
+      <p style="margin:10px 0 0; font-size:15px; line-height:1.6; color:#5F5D66">Plain-language questions about money, freedom, and the world. Strongly disagree to strongly agree — there are no right answers.</p>
+    </div>
+    <div style="background:#FFFFFF; border:1px solid #E5E3DC; border-radius:22px; padding:30px">
+      <div style="font-family:'Fraunces',Georgia,serif; font-size:34px; font-weight:600; color:#E39B2D">02</div>
+      <div style="margin-top:12px; font-size:18px; font-weight:600">See your map instantly</div>
+      <p style="margin:10px 0 0; font-size:15px; line-height:1.6; color:#5F5D66">Scores are computed in your browser the moment you finish. Nothing is uploaded, no account is needed, and you can pause anytime.</p>
+    </div>
+    <div style="background:#FFFFFF; border:1px solid #E5E3DC; border-radius:22px; padding:30px">
+      <div style="font-family:'Fraunces',Georgia,serif; font-size:34px; font-weight:600; color:#3D6FA8">03</div>
+      <div style="margin-top:12px; font-size:18px; font-weight:600">Compare and share</div>
+      <p style="margin:10px 0 0; font-size:15px; line-height:1.6; color:#5F5D66">Get your closest ideology matches, then share a link that carries your scores — or download your map as an image.</p>
+    </div>
+  </div>
+
+  <div style="margin-top:24px; background:#FFFFFF; border:1px solid #E5E3DC; border-radius:18px; padding:20px 26px; display:flex; align-items:center; gap:14px">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16151A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.6-3 7.6-7 9.5-4-1.9-7-4.9-7-9.5V6z"/><path d="M9 12l2 2 4-4.5"/></svg>
+    <div style="font-size:14.5px; color:#4A4850"><strong style="font-weight:600; color:#16151A">Private by design.</strong> Your answers stay on your device — no accounts, no cookies, no tracking of what you clicked.</div>
+  </div>
+</section>
+
+<!-- ============ IDEOLOGY GUIDES ============ -->
+<section style="max-width:1160px; margin:0 auto; padding:104px 48px 0">
+  <div style="font-size:12px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:#6E6C76">Learn before (or after) you test</div>
+  <h2 style="margin:14px 0 0; font-family:'Fraunces',Georgia,serif; font-size:40px; font-weight:600; line-height:1.12; letter-spacing:-0.01em">Explore the Spectrum</h2>
+  <p style="margin:16px 0 0; max-width:660px; font-size:16.5px; line-height:1.6; color:#5F5D66">Where do the familiar labels actually sit? Short, plain-English guides with history, core beliefs, and the people behind each idea.</p>
+
+  <div style="display:grid; grid-template-columns:repeat(5, minmax(0, 1fr)); gap:20px; margin-top:40px">
+    <a href="./Ideology.dc.html" style="background:#FFFFFF; border:1px solid #E5E3DC; border-radius:18px; padding:20px 18px; text-decoration:none; color:#16151A; display:block">
+      <div style="font-size:15px; font-weight:600">Social Democracy</div>
+      <p style="margin:8px 0 0; font-size:12.5px; line-height:1.5; color:#6E6C76">A market economy tamed by a strong welfare state.</p>
+    </a>
+    <a href="#" style="background:#FFFFFF; border:1px solid #E5E3DC; border-radius:18px; padding:20px 18px; text-decoration:none; color:#16151A; display:block">
+      <div style="font-size:15px; font-weight:600">Liberalism</div>
+      <p style="margin:8px 0 0; font-size:12.5px; line-height:1.5; color:#6E6C76">Individual rights, open markets, limited government.</p>
+    </a>
+    <a href="#" style="background:#FFFFFF; border:1px solid #E5E3DC; border-radius:18px; padding:20px 18px; text-decoration:none; color:#16151A; display:block">
+      <div style="font-size:15px; font-weight:600">Conservatism</div>
+      <p style="margin:8px 0 0; font-size:12.5px; line-height:1.5; color:#6E6C76">Change should be gradual; institutions carry wisdom.</p>
+    </a>
+    <a href="#" style="background:#FFFFFF; border:1px solid #E5E3DC; border-radius:18px; padding:20px 18px; text-decoration:none; color:#16151A; display:block">
+      <div style="font-size:15px; font-weight:600">Democratic Socialism</div>
+      <p style="margin:8px 0 0; font-size:12.5px; line-height:1.5; color:#6E6C76">Democracy extended into the workplace and economy.</p>
+    </a>
+    <a href="#" style="background:#FFFFFF; border:1px solid #E5E3DC; border-radius:18px; padding:20px 18px; text-decoration:none; color:#16151A; display:block">
+      <div style="font-size:15px; font-weight:600">Libertarianism</div>
+      <p style="margin:8px 0 0; font-size:12.5px; line-height:1.5; color:#6E6C76">Maximum personal and economic freedom, minimal state.</p>
+    </a>
+    <a href="#" style="background:#FFFFFF; border:1px solid #E5E3DC; border-radius:18px; padding:20px 18px; text-decoration:none; color:#16151A; display:block">
+      <div style="font-size:15px; font-weight:600">Progressivism</div>
+      <p style="margin:8px 0 0; font-size:12.5px; line-height:1.5; color:#6E6C76">Use government to actively reform society.</p>
+    </a>
+    <a href="#" style="background:#FFFFFF; border:1px solid #E5E3DC; border-radius:18px; padding:20px 18px; text-decoration:none; color:#16151A; display:block">
+      <div style="font-size:15px; font-weight:600">Green Politics</div>
+      <p style="margin:8px 0 0; font-size:12.5px; line-height:1.5; color:#6E6C76">Ecological limits first, social justice alongside.</p>
+    </a>
+    <a href="#" style="background:#FFFFFF; border:1px solid #E5E3DC; border-radius:18px; padding:20px 18px; text-decoration:none; color:#16151A; display:block">
+      <div style="font-size:15px; font-weight:600">Centrism</div>
+      <p style="margin:8px 0 0; font-size:12.5px; line-height:1.5; color:#6E6C76">Judge each issue on its merits; balance beats ideology.</p>
+    </a>
+    <a href="#" style="background:#FFFFFF; border:1px solid #E5E3DC; border-radius:18px; padding:20px 18px; text-decoration:none; color:#16151A; display:block">
+      <div style="font-size:15px; font-weight:600">National Conservatism</div>
+      <p style="margin:8px 0 0; font-size:12.5px; line-height:1.5; color:#6E6C76">Nation, borders, and tradition before integration.</p>
+    </a>
+    <a href="#" style="background:#FFFFFF; border:1px solid #E5E3DC; border-radius:18px; padding:20px 18px; text-decoration:none; color:#16151A; display:block">
+      <div style="font-size:15px; font-weight:600">Populism</div>
+      <p style="margin:8px 0 0; font-size:12.5px; line-height:1.5; color:#6E6C76">The people against the elite — on both left and right.</p>
+    </a>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section style="max-width:1160px; margin:0 auto; padding:104px 48px 0">
+  <div style="font-size:12px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:#6E6C76">Good to know</div>
+  <h2 style="margin:14px 0 0; font-family:'Fraunces',Georgia,serif; font-size:40px; font-weight:600; line-height:1.12; letter-spacing:-0.01em">Questions, Answered</h2>
+
+  <div style="margin-top:36px; border-top:1px solid #E5E3DC; max-width:860px">
+    <div style="padding:24px 4px; border-bottom:1px solid #E5E3DC">
+      <div style="display:flex; justify-content:space-between; align-items:center; gap:20px">
+        <div style="font-size:17px; font-weight:600">Is the Political Spectrum Test really free?</div>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6E6C76" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+      </div>
+      <p style="margin:12px 0 0; font-size:15px; line-height:1.65; color:#5F5D66">Yes — no sign-up, no paywall, no ads. Answer 24 statements, see your result, share it if you like.</p>
+    </div>
+    <div style="padding:24px 4px; border-bottom:1px solid #E5E3DC">
+      <div style="display:flex; justify-content:space-between; align-items:center; gap:20px">
+        <div style="font-size:17px; font-weight:600">Do you store my answers?</div>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6E6C76" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+      </div>
+    </div>
+    <div style="padding:24px 4px; border-bottom:1px solid #E5E3DC">
+      <div style="display:flex; justify-content:space-between; align-items:center; gap:20px">
+        <div style="font-size:17px; font-weight:600">What are the four dimensions?</div>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6E6C76" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+      </div>
+    </div>
+    <div style="padding:24px 4px; border-bottom:1px solid #E5E3DC">
+      <div style="display:flex; justify-content:space-between; align-items:center; gap:20px">
+        <div style="font-size:17px; font-weight:600">Will I get a single label?</div>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6E6C76" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+      </div>
+    </div>
+    <div style="padding:24px 4px; border-bottom:1px solid #E5E3DC">
+      <div style="display:flex; justify-content:space-between; align-items:center; gap:20px">
+        <div style="font-size:17px; font-weight:600">Is this the same as the Political Compass?</div>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6E6C76" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+      </div>
+    </div>
+    <div style="padding:24px 4px; border-bottom:1px solid #E5E3DC">
+      <div style="display:flex; justify-content:space-between; align-items:center; gap:20px">
+        <div style="font-size:17px; font-weight:600">How accurate are the results?</div>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6E6C76" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+      </div>
+    </div>
+  </div>
+  <a href="#" style="display:inline-block; margin-top:24px; font-size:15px; font-weight:600; color:#16151A">Read the full methodology →</a>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer style="background:#16151A; color:#B9B7BF; margin-top:104px">
+  <div style="max-width:1160px; margin:0 auto; padding:60px 48px 48px; display:grid; grid-template-columns:1.5fr 1fr 1fr 1fr; gap:44px">
+    <div>
+      <div style="display:flex; align-items:center; gap:11px; color:#FFFFFF">
+        <svg width="26" height="26" viewBox="0 0 28 28" aria-hidden="true">
+          <defs><linearGradient id="lg-f" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#D64550"/><stop offset="0.36" stop-color="#E39B2D"/><stop offset="0.64" stop-color="#7C9C62"/><stop offset="1" stop-color="#3D6FA8"/>
+          </linearGradient></defs>
+          <circle cx="14" cy="14" r="9.5" fill="none" stroke="url(#lg-f)" stroke-width="5"/>
+        </svg>
+        <span style="font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:18px">Political Spectrum Test</span>
+      </div>
+      <p style="margin:18px 0 0; font-size:14px; line-height:1.65; color:#B9B7BF">A free, independent educational tool for understanding where you — and the world's political ideologies — sit on the spectrum.</p>
+      <p style="margin:16px 0 0; font-size:12.5px; line-height:1.6; color:#8A8894">Non-partisan and unaffiliated. Not connected to any political party, movement, or other test website.</p>
+    </div>
+    <div>
+      <div style="font-size:12px; font-weight:600; letter-spacing:0.13em; text-transform:uppercase; color:#FFFFFF">Test</div>
+      <div style="margin-top:16px; display:flex; flex-direction:column; gap:11px; font-size:14px">
+        <a href="#" style="color:#B9B7BF; text-decoration:none">Start the test</a>
+        <a href="#" style="color:#B9B7BF; text-decoration:none">How it works</a>
+        <a href="#" style="color:#B9B7BF; text-decoration:none">Methodology</a>
+        <a href="#" style="color:#B9B7BF; text-decoration:none">Sample result</a>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:12px; font-weight:600; letter-spacing:0.13em; text-transform:uppercase; color:#FFFFFF">Guides</div>
+      <div style="margin-top:16px; display:flex; flex-direction:column; gap:11px; font-size:14px">
+        <a href="./Ideology.dc.html" style="color:#B9B7BF; text-decoration:none">Social Democracy</a>
+        <a href="#" style="color:#B9B7BF; text-decoration:none">Liberalism</a>
+        <a href="#" style="color:#B9B7BF; text-decoration:none">Conservatism</a>
+        <a href="#" style="color:#B9B7BF; text-decoration:none">Libertarianism</a>
+        <a href="#" style="color:#B9B7BF; text-decoration:none">All 10 guides</a>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:12px; font-weight:600; letter-spacing:0.13em; text-transform:uppercase; color:#FFFFFF">About</div>
+      <div style="margin-top:16px; display:flex; flex-direction:column; gap:11px; font-size:14px">
+        <a href="#" style="color:#B9B7BF; text-decoration:none">About the project</a>
+        <a href="#" style="color:#B9B7BF; text-decoration:none">Privacy</a>
+        <a href="#" style="color:#B9B7BF; text-decoration:none">Contact</a>
+      </div>
+    </div>
+  </div>
+  <div style="border-top:1px solid rgba(255,255,255,0.12)">
+    <div style="max-width:1160px; margin:0 auto; padding:22px 48px; display:flex; justify-content:space-between; gap:20px; font-size:13px; color:#8A8894">
+      <span>© 2026 Political Spectrum Test · politicalspectrumtest.online</span>
+      <span>Educational tool — results are for reflection, not science.</span>
+    </div>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":5200}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

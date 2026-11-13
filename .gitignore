@@ -1,0 +1,20 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Local servers / logs
+*.log
+.artifact-server.json
+.artifact-server.log
+
+# Node (project has no runtime deps; ignore artifacts if any appear)
+node_modules/
+
+# Design canvas runtime files (editor state; comments.json is user content but
+# stays in sync with the canvas folder and is not site source)
+gui-test-screenshots/
