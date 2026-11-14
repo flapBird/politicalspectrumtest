@@ -64,7 +64,7 @@
   <section class="container prose">
     <div class="notice" style="margin-top:0">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16151A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.6-3 7.6-7 9.5-4-1.9-7-4.9-7-9.5V6z"/><path d="M9 12l2 2 4-4.5"/></svg>
-      <div><strong>The short version:</strong> no accounts and no server-side storage of your answers — the test scores in your browser, and your answers never leave your device. The public site does use standard analytics (Google Analytics 4 and Microsoft Clarity) to see which pages are visited; they never receive your answers or results, and they are switched off entirely on local and development environments.</div>
+      <div><strong>The short version:</strong> no accounts and no server-side storage of your answers — the test scores in your browser, and your answers never leave your device. The public site does use standard analytics (Google Analytics 4 and Microsoft Clarity) to see which pages are visited; they never receive your answers or results, and they load only on the production domain — never in local development or preview deployments.</div>
     </div>
 
     <h2>What we collect</h2>
@@ -87,7 +87,7 @@
       <li><strong>Google Analytics 4</strong>, via Google Tag Manager (container GTM-TK3S6NTX): standard page and event analytics. Google sets the <code>_ga</code> cookies (up to 13 months) to distinguish visits and sessions, and processes technical data (such as IP address, truncated in standard configurations) on our behalf.</li>
       <li><strong>Microsoft Clarity</strong> (project zdgwt1geja): anonymized interaction analytics — clicks, scrolls, and heatmaps. Clarity masks all text content it records by default and does not capture keystrokes.</li>
     </ul>
-    <p><strong>Development guard:</strong> both services are fully disabled on localhost, 127.0.0.1, ::1, <code>*.local</code>, private-network IP ranges, and <code>file://</code> — local development and testing send nothing and make no external requests.</p>
+    <p><strong>Where analytics run:</strong> both services load only on the production domains (politicalspectrumtest.online and www.politicalspectrumtest.online). Everywhere else they are fully disabled and send nothing: local development (localhost, 127.0.0.1, ::1, <code>*.local</code>, private-network IP ranges, <code>file://</code>), Cloudflare preview deployments (<code>*.pages.dev</code>), and any staging or mirror host.</p>
     <p>Your answers and results are never sent to either service. If you arrive via a shared result link, the four score numbers in that URL can appear in analytics page records; your individual answers never do. Any ad-blocker or browser tracking setting disables both services without affecting how the site works.</p>
 
     <h2>Fonts and external requests</h2>
