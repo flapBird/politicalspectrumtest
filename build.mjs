@@ -190,7 +190,7 @@ function guidePage(ideo, all) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${esc(ideo.name)} — What It Believes and Where It Sits | Political Spectrum Test</title>
+<title>${esc(ideo.name)} — Beliefs &amp; Spectrum Position</title>
 <meta name="description" content="${esc(ideo.desc)}">
 <link rel="canonical" href="${url}">
 <link rel="alternate" hreflang="en" href="${url}">
@@ -298,8 +298,8 @@ function hubPage(all) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ideology Guides — Explore the Political Spectrum | Political Spectrum Test</title>
-<meta name="description" content="Plain-English guides to 10 major political ideologies: what they believe, key figures, neighbours on the spectrum, and FAQs — with a free test to find where you sit.">
+<title>Ideology Guides — Explore the Political Spectrum</title>
+<meta name="description" content="Plain-English guides to 10 political ideologies: beliefs, key figures, FAQs, and where each sits on the spectrum — with a free test to find yours.">
 <link rel="canonical" href="${url}">
 <link rel="alternate" hreflang="en" href="${url}">
 <link rel="alternate" hreflang="x-default" href="${url}">
