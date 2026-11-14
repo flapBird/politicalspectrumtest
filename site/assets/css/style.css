@@ -349,6 +349,13 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 .axis-card p { margin: 14px 0 0; font-size: 14px; line-height: 1.6; color: var(--muted); }
 .result-lower { display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 24px; margin-top: 56px; align-items: stretch; }
 .share-stack { margin-top: 22px; display: flex; flex-direction: column; gap: 12px; }
+.share-url-box {
+  width: 100%; margin-top: 4px;
+  padding: 12px 14px;
+  border: 1px solid var(--line-strong); border-radius: 10px;
+  background: var(--soft); color: var(--ink-soft);
+  font-family: var(--font-body); font-size: 13px; line-height: 1.4;
+}
 .share-note { margin-top: 18px; font-size: 12.5px; line-height: 1.6; color: var(--ghost); }
 .next-band {
   background: var(--surface); border: 1px solid var(--line); border-top: 4px solid var(--blue);

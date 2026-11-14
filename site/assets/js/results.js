@@ -285,23 +285,64 @@
 
     buildMap(user, top);
 
-    /* Sharing */
-    var shareUrl = window.location.origin + '/results/?e=' + user.e + '&c=' + user.c + '&s=' + user.s + '&g=' + user.g;
+    /* Sharing — the copied link is the bare URL so pasting it anywhere just works.
+       On http(s) we reuse the current origin (staging/production both correct);
+       on non-http origins (e.g. file://) fall back to the canonical domain. */
+    var shareOrigin = /^https?:$/.test(window.location.protocol)
+      ? window.location.origin
+      : 'https://politicalspectrumtest.online';
+    var shareUrl = shareOrigin + '/results/?e=' + user.e + '&c=' + user.c + '&s=' + user.s + '&g=' + user.g;
     var shareText = 'I lean ' + top.ideo.name + ' (' + top.pct + '% proximity) on the Political Spectrum Test. See my map:';
 
     var copyBtn = document.getElementById('shareCopy');
     copyBtn.addEventListener('click', function () {
-      var full = shareText + ' ' + shareUrl;
       function done() {
         copyBtn.textContent = 'Copied — ready to paste';
         window.setTimeout(function () { copyBtn.textContent = 'Copy result link'; }, 2200);
       }
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(full).then(done, function () { fallbackCopy(full); done(); });
-      } else {
-        fallbackCopy(full); done();
+      function fail() {
+        copyBtn.textContent = 'Couldn’t auto-copy — link selected below';
+        showFallbackBox();
+        window.setTimeout(function () { copyBtn.textContent = 'Copy result link'; }, 3000);
       }
+      var attempt;
+      if (navigator.clipboard && navigator.clipboard.writeText && window.isSecureContext) {
+        attempt = navigator.clipboard.writeText(shareUrl).then(function () { return true; }, function () { return fallbackCopy(shareUrl); });
+      } else {
+        attempt = Promise.resolve(fallbackCopy(shareUrl));
+      }
+      attempt.then(function (ok) { if (ok) done(); else fail(); });
     });
+
+    function showFallbackBox() {
+      var box = document.getElementById('shareUrlBox');
+      if (!box) {
+        box = document.createElement('input');
+        box.type = 'text';
+        box.readOnly = true;
+        box.id = 'shareUrlBox';
+        box.className = 'share-url-box';
+        box.setAttribute('aria-label', 'Your result link');
+        copyBtn.parentNode.insertBefore(box, copyBtn.nextSibling);
+      }
+      box.value = shareUrl;
+      box.focus();
+      box.select();
+    }
+
+    function fallbackCopy(text) {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.top = '-9999px';
+      document.body.appendChild(ta);
+      ta.select();
+      var ok = false;
+      try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+      ta.remove();
+      return ok;
+    }
 
     var shareBtn = document.getElementById('shareBtn');
     if (navigator.share) {
