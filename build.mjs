@@ -149,6 +149,15 @@ function guidePage(ideo, all) {
           <p class="faq-a">${esc(f.a)}</p>
         </details>`).join('');
 
+  const sources = [
+    { label: `Wikipedia — ${ideo.name}`, url: `https://en.wikipedia.org/wiki/${encodeURIComponent(ideo.name.replace(/ /g, '_'))}` },
+    ...(ideo.extraSources || [])
+  ];
+  const sourceItems = sources
+    .map((s) => `        <li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a></li>`)
+    .concat('        <li><a href="/methodology/">How the Political Spectrum Test scores and matches</a></li>')
+    .join('\n');
+
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -168,6 +177,8 @@ function guidePage(ideo, all) {
         '@id': url + '#article',
         headline: `${ideo.name} — What It Believes and Where It Sits`,
         description: ideo.desc,
+        datePublished: LASTMOD,
+        dateModified: LASTMOD,
         inLanguage: 'en',
         isPartOf: { '@id': SITE.domain + '/#website' },
         about: { '@type': 'Thing', name: ideo.name },
@@ -221,6 +232,7 @@ ${header({ gradientId: 'lg-' + ideo.slug.replace(/-/g, ''), navActive: 'guides' 
     <p class="eyebrow" style="margin-top:22px">Political ideology guide</p>
     <h1>${esc(ideo.name)}</h1>
     <p class="guide-lede">${esc(ideo.lede)}</p>
+    <p class="page-meta">Last updated ${LASTMOD}</p>
   </section>
 
   <section class="container" style="padding-top:44px">
@@ -264,6 +276,14 @@ ${header({ gradientId: 'lg-' + ideo.slug.replace(/-/g, ''), navActive: 'guides' 
     <div class="faq-list" style="max-width:900px">${faqItems}
     </div>
   </section>
+
+  <section class="container section" style="padding-top:56px">
+    <h2 style="font-size:30px">Sources &amp; further reading</h2>
+    <ul class="sources-list">
+${sourceItems}
+    </ul>
+    <p style="margin-top:16px; font-size:13px; color:var(--faint)">Outbound links are for independent reading — we don’t control their content.</p>
+  </section>
 ${ctaBand(`How close are you to ${PERSON_FORM[ideo.slug] || ideo.name + ' supporters'}?`, 'Take the free test and compare yourself against 14 ideologies — right on your own device.')}${footerSlim()}
 </main>
 </body>
@@ -285,13 +305,24 @@ function hubPage(all) {
 
   const schema = {
     '@context': 'https://schema.org',
-    '@type': 'CollectionPage',
-    '@id': url,
-    name: 'Ideology Guides — Explore the Political Spectrum',
-    url,
-    description: 'Plain-English guides to the major political ideologies: what they believe, key figures, and where each sits on the spectrum.',
-    isPartOf: { '@id': SITE.domain + '/#website' },
-    hasPart: all.map((i) => ({ '@type': 'Article', name: i.name, url: `${SITE.domain}/ideologies/${i.slug}/` }))
+    '@graph': [
+      {
+        '@type': 'CollectionPage',
+        '@id': url,
+        name: 'Ideology Guides — Explore the Political Spectrum',
+        url,
+        description: 'Plain-English guides to the major political ideologies: what they believe, key figures, and where each sits on the spectrum.',
+        isPartOf: { '@id': SITE.domain + '/#website' },
+        hasPart: all.map((i) => ({ '@type': 'Article', name: i.name, url: `${SITE.domain}/ideologies/${i.slug}/` }))
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.domain + '/' },
+          { '@type': 'ListItem', position: 2, name: 'Ideology Guides' }
+        ]
+      }
+    ]
   };
 
   return `<!doctype html>
@@ -327,6 +358,11 @@ ${header({ gradientId: 'lg-hub', navActive: 'guides' })}
     <p class="eyebrow">Ideology guides</p>
     <h1 style="font-size:clamp(38px,5vw,56px); margin-top:16px">Explore the Spectrum</h1>
     <p class="guide-lede">Ten plain-English guides to the traditions that shape modern politics — what each believes, who led it, who its neighbours are, and the questions people actually ask about it.</p>
+    <div style="max-width:820px; margin-top:20px">
+      <p style="margin:0; font-size:15.5px; line-height:1.75; color:var(--ink-soft)">Every guide follows the same structure: a one-paragraph definition, where the tradition sits on our four dimensions, its core beliefs, three key figures, its neighbours on the spectrum, and the questions people actually ask about it. The dimensions are the same ones the test measures — <strong>economy</strong> (public versus market), <strong>civil liberties</strong> (liberty versus order), <strong>society</strong> (tradition versus change), and <strong>global outlook</strong> (nation versus one world) — so what you read here maps directly onto what you score there.</p>
+      <p style="margin:14px 0 0; font-size:15.5px; line-height:1.75; color:var(--ink-soft)">Read them before the test to know what to look for, or after it to put your result in context. “Neighbour on the spectrum” is a description of position, never a judgment of worth — and every guide links to independent sources if you want to go deeper than a summary can take you.</p>
+      <p style="margin:14px 0 0; font-size:15.5px; line-height:1.75; color:var(--ink-soft)">Not sure where to start? <a href="/ideologies/social-democracy/">Social Democracy</a> and <a href="/ideologies/liberalism/">Liberalism</a> anchor the centre-left and the centre-right — follow the neighbour links wherever your curiosity goes.</p>
+    </div>
   </section>
 
   <section class="container" style="padding-top:44px">

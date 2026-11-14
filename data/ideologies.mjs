@@ -23,6 +23,9 @@ export const ideologies = [
     desc: 'What social democracy believes: universal services, regulated markets, worker rights — and where it sits on the political spectrum. A plain-English guide.',
     lede: 'Social democracy keeps the market economy but insists that democracy — not money — sets its rules. Universal public services, strong worker rights, and a safety net no one falls through are its signature; the Nordic countries are its showcase.',
     pos: { e: 36, c: 70, s: 66, g: 62 },
+    extraSources: [
+      { label: 'The Nordic model — an overview', url: 'https://en.wikipedia.org/wiki/Nordic_model' }
+    ],
     poles: { econ: 'Center-left', civ: 'Liberty-leaning', soc: 'Progressive', geo: 'Globalist' },
     beliefs: [
       'Universal healthcare, education, and a strong social safety net',
@@ -61,6 +64,10 @@ export const ideologies = [
     desc: 'What liberalism believes: individual rights, consent, free markets, tolerance — and where it sits on the political spectrum. A plain-English guide.',
     lede: 'Liberalism starts from the individual: rights that precede the state, consent as the basis of government, and markets and tolerance as the default. Its classical wing wants the state small; its social wing wants the state to guarantee real opportunity.',
     pos: { e: 68, c: 80, s: 60, g: 64 },
+    extraSources: [
+      { label: 'Stanford Encyclopedia of Philosophy: Liberalism', url: 'https://plato.stanford.edu/entries/liberalism/' },
+      { label: 'Encyclopaedia Britannica: Liberalism', url: 'https://www.britannica.com/topic/liberalism' }
+    ],
     poles: { econ: 'Center-right', civ: 'Liberty-first', soc: 'Mixed', geo: 'Globalist-leaning' },
     beliefs: [
       'Individual rights — speech, conscience, association — that the state may not override',
@@ -99,6 +106,9 @@ export const ideologies = [
     desc: 'What conservatism believes: gradual reform, family, faith, nation — and where it sits on the political spectrum. Key figures, history, FAQs inside.',
     lede: 'Conservatism treats society as an inheritance: customs, family, faith, and nation hold accumulated wisdom no blueprint can replace. Reform is welcome — when it respects what already works and moves at a pace people can absorb.',
     pos: { e: 62, c: 45, s: 28, g: 42 },
+    extraSources: [
+      { label: 'Stanford Encyclopedia of Philosophy: Conservatism', url: 'https://plato.stanford.edu/entries/conservatism/' }
+    ],
     poles: { econ: 'Center-right', civ: 'Balanced', soc: 'Traditional', geo: 'Somewhat nation-first' },
     beliefs: [
       'Gradual, pragmatic change over grand designs',
@@ -137,6 +147,9 @@ export const ideologies = [
     desc: 'What democratic socialism believes: worker ownership, universal services, democracy in the economy — and where it sits on the spectrum. A plain-English guide.',
     lede: 'Democratic socialism goes further than regulating markets: it wants the big levers of the economy — major industries, finance, large firms — under collective or worker control, chosen through ballots and unions rather than revolution.',
     pos: { e: 15, c: 70, s: 68, g: 62 },
+    extraSources: [
+      { label: 'Encyclopaedia Britannica: Socialism', url: 'https://www.britannica.com/topic/socialism' }
+    ],
     poles: { econ: 'Left', civ: 'Liberty-leaning', soc: 'Progressive', geo: 'Globalist' },
     beliefs: [
       'The economy should serve human needs, not shareholder returns alone',
@@ -175,6 +188,9 @@ export const ideologies = [
     desc: 'What libertarianism believes: self-ownership, free markets, minimal state, personal freedom — and where it sits on the spectrum. A plain-English guide.',
     lede: 'Libertarianism starts from self-ownership: your life, labor, and property are yours. The state’s job shrinks to protecting people from force and fraud — everything else, from schools to sobriety, is left to voluntary choice and free markets.',
     pos: { e: 82, c: 92, s: 55, g: 62 },
+    extraSources: [
+      { label: 'Stanford Encyclopedia of Philosophy: Libertarianism', url: 'https://plato.stanford.edu/entries/libertarianism/' }
+    ],
     poles: { econ: 'Right', civ: 'Liberty-first', soc: 'Mixed', geo: 'Globalist-leaning' },
     beliefs: [
       'Self-ownership: your body, labor, and property are yours by right',
@@ -213,6 +229,9 @@ export const ideologies = [
     desc: 'What progressivism believes: active reform, expertise, equal opportunity, correcting injustice — and where it sits on the spectrum. FAQs inside.',
     lede: 'Progressivism is the politics of deliberate improvement: identify injustice — in workplaces, politics, or institutions — then use organized government, expertise, and citizen action to fix it. It runs on the optimism that institutions can be made fairer on purpose.',
     pos: { e: 38, c: 75, s: 88, g: 70 },
+    extraSources: [
+      { label: 'The Progressive Era (United States) — an overview', url: 'https://en.wikipedia.org/wiki/Progressive_Era' }
+    ],
     poles: { econ: 'Center-left', civ: 'Liberty-leaning', soc: 'Progressive', geo: 'Globalist-leaning' },
     beliefs: [
       'Injustice is a design problem — institutions can be rebuilt',
@@ -251,6 +270,9 @@ export const ideologies = [
     desc: 'What green politics believes: ecological limits, climate action, intergenerational justice — and where it sits on the spectrum. A plain-English guide.',
     lede: 'Green politics treats the planet’s carrying capacity as the hard constraint every other policy must respect. Climate action, biodiversity, and intergenerational justice come first — but greens pair them with social justice, grassroots democracy, and nonviolence.',
     pos: { e: 30, c: 72, s: 78, g: 82 },
+    extraSources: [
+      { label: 'Green parties — the party family, worldwide', url: 'https://en.wikipedia.org/wiki/Green_party' }
+    ],
     poles: { econ: 'Center-left', civ: 'Liberty-leaning', soc: 'Progressive', geo: 'Globalist' },
     beliefs: [
       'Ecological limits are real and binding — the economy exists inside the biosphere',
@@ -289,6 +311,9 @@ export const ideologies = [
     desc: 'What centrism believes: pragmatism, evidence, balance, incremental reform, anti-extremism — and where it sits on the political spectrum. A plain-English guide.',
     lede: 'Centrism is less a set of positions than a method: weigh evidence, split the difference where the evidence is split, distrust grand theories, and build coalitions that can actually govern. Critics call it lukewarm; centrists call it sanity.',
     pos: { e: 50, c: 55, s: 50, g: 50 },
+    extraSources: [
+      { label: 'Median voter theorem — why competitive politics pulls to the centre', url: 'https://en.wikipedia.org/wiki/Median_voter_theorem' }
+    ],
     poles: { econ: 'Center', civ: 'Balanced', soc: 'Mixed', geo: 'Balanced' },
     beliefs: [
       'Pragmatism over ideology — what works matters more than doctrine',
@@ -327,6 +352,9 @@ export const ideologies = [
     desc: 'What national conservatism believes: sovereignty, borders, tradition, self-government — and where it sits on the spectrum. A plain-English guide.',
     lede: 'National conservatism puts the nation-state at the center of political life: sovereignty over integration, borders over openness, and inherited culture over cosmopolitan pluralism. It accepts a market economy — but reserves the right to steer it for national ends.',
     pos: { e: 60, c: 35, s: 20, g: 12 },
+    extraSources: [
+      { label: 'Illiberal democracy — the term Orbán popularized', url: 'https://en.wikipedia.org/wiki/Illiberal_democracy' }
+    ],
     poles: { econ: 'Center-right', civ: 'Somewhat order-first', soc: 'Traditional', geo: 'Nation-first' },
     beliefs: [
       'National sovereignty and self-government above international bodies',
@@ -365,6 +393,9 @@ export const ideologies = [
     desc: 'What populism believes: popular sovereignty, anti-elitism, distrust of institutions — and why it appears on both left and right. A plain-English guide.',
     lede: 'Populism is a frame, not a fixed platform: society is split into “the people” and “the corrupt elite”, and politics should return power to the former. It can lean left (against bankers and corporations) or right (against cultural elites and global institutions) — what’s constant is the confrontation.',
     pos: { e: 48, c: 42, s: 38, g: 14 },
+    extraSources: [
+      { label: 'Stanford Encyclopedia of Philosophy: Populism', url: 'https://plato.stanford.edu/entries/populism/' }
+    ],
     poles: { econ: 'Center', civ: 'Somewhat order-first', soc: 'Somewhat traditional', geo: 'Nation-first' },
     beliefs: [
       'Sovereignty belongs to “the people”, not to institutions or experts',
