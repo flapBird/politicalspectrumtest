@@ -207,6 +207,7 @@ function guidePage(ideo, all) {
 <meta property="og:image" content="${SITE.domain}/assets/img/og-cover.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="/assets/css/style.css">
+<script src="/assets/js/analytics.js" defer></script>
 <script type="application/ld+json">${JSON.stringify(articleSchema)}</script>
 <script type="application/ld+json">${JSON.stringify(faqSchema)}</script>
 </head>
@@ -315,6 +316,7 @@ function hubPage(all) {
 <meta property="og:image" content="${SITE.domain}/assets/img/og-cover.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="/assets/css/style.css">
+<script src="/assets/js/analytics.js" defer></script>
 <script type="application/ld+json">${JSON.stringify(schema)}</script>
 </head>
 <body>

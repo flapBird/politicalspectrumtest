@@ -37,7 +37,7 @@ python3 -m http.server -d site 8080   # local preview
 
 - **Questions / scoring / ideologies (matching engine):** `site/assets/js/test.js` (QUESTIONS) and `site/assets/js/results.js` (IDEOLOGIES reference positions + band descriptions). Keep the two engines' axis conventions in sync: `e` 0=left→100=right, `c` 0=order→100=liberty, `s` 0=tradition→100=change, `g` 0=nation→100=one world.
 - **Ideology guide pages:** edit `data/ideologies.mjs`, then run `node build.mjs`.
-- **Analytics:** none today. If ever added, it must stay gated off for localhost/127.0.0.1/::1/*.local/private IPs (see privacy page promises before changing this).
+- **Analytics:** GA4 (via GTM container `GTM-TK3S6NTX`) + Microsoft Clarity (`zdgwt1geja`), loaded only through `site/assets/js/analytics.js`, which hard-gates localhost/127.0.0.1/::1/`*.local`/private-IP/`file:` origins — they never fire in local development. If analytics change, update the privacy page in the same round.
 
 ## Deployment notes
 
